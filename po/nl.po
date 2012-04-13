@@ -1,0 +1,149 @@
+# Dutch translations for plugins package.
+# Copyright (C) 2012 THE plugins'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the plugins package.
+# Automatically generated, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plugins 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-13 12:34+0100\n"
+"PO-Revision-Date: 2012-04-13 14:08+0100\n"
+"Last-Translator: \n"
+"Language-Team: Andy Blackburn, Rob van der Does\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+
+#: ../src/plugin.py:121
+msgid "Adress:"
+msgstr "Adres:"
+
+#: ../src/plugin.py:194
+msgid "Close"
+msgstr "Sluit"
+
+#: ../src/plugin.py:236
+msgid "Connection to remote IP ok"
+msgstr "Verbinding met server OK"
+
+#: ../src/plugin.py:567
+msgid "Convert remote channel list for streaming"
+msgstr "Converteert de server kanaallijst voor streaming"
+
+#: ../src/plugin.py:242
+msgid "Could not connect to remote IP"
+msgstr "Kon niet met server verbinden"
+
+#: ../src/plugin.py:310
+msgid "Download"
+msgstr "Download"
+
+#: ../src/plugin.py:254
+#: ../src/plugin.py:294
+msgid "Download from remote failed"
+msgstr "Download van serverbox mislukt"
+
+#: ../src/plugin.py:245
+msgid "Downloading remote services"
+msgstr "Download kanalen van server"
+
+#: ../src/plugin.py:141
+msgid "Enter address"
+msgstr "Geef adres"
+
+#: ../src/plugin.py:147
+msgid "Enter password"
+msgstr "Geef wachtwoord"
+
+#: ../src/plugin.py:144
+msgid "Enter username"
+msgstr "Geef gebruikersnaam"
+
+#: ../src/plugin.py:50
+msgid "Exit"
+msgstr "Afsluiten"
+
+#: ../src/plugin.py:299
+#, python-format
+msgid "FTP reading file %d of %d"
+msgstr "FTP leest bestand %d van %d"
+
+#: ../src/plugin.py:111
+#: ../src/plugin.py:124
+msgid "FTPport:"
+msgstr "FTP-poort:"
+
+#: ../src/plugin.py:108
+msgid "IP:"
+msgstr "IP:"
+
+#: ../src/plugin.py:311
+msgid "Invert"
+msgstr "Keer om"
+
+#: ../src/plugin.py:94
+msgid "Keyboard"
+msgstr "Toetsenbord"
+
+#: ../src/plugin.py:303
+msgid "Make your selection"
+msgstr "Maak uw keuze"
+
+#: ../src/plugin.py:449
+msgid "No bouquets selected"
+msgstr "Geen favorieten gekozen"
+
+#: ../src/plugin.py:51
+msgid "OK"
+msgstr "OK"
+
+#: ../src/plugin.py:112
+#: ../src/plugin.py:125
+msgid "Passive:"
+msgstr "Passief:"
+
+#: ../src/plugin.py:110
+#: ../src/plugin.py:123
+msgid "Password:"
+msgstr "Wachtwoord:"
+
+#: ../src/plugin.py:562
+#: ../src/plugin.py:567
+msgid "Remote channel stream converter"
+msgstr "Remote channel stream converter"
+
+#: ../src/plugin.py:198
+msgid "Select a remote server IP first"
+msgstr "Kies eerst een server-IP"
+
+#: ../src/plugin.py:196
+msgid "Set server IP"
+msgstr "Stel server IP in"
+
+#: ../src/plugin.py:113
+#: ../src/plugin.py:126
+msgid "Telnetport:"
+msgstr "Telnetpoort:"
+
+#: ../src/plugin.py:227
+msgid "Testing remote connection"
+msgstr "Test verbinding met server"
+
+#: ../src/plugin.py:102
+msgid "Use IP"
+msgstr "Gebruik IP"
+
+#: ../src/plugin.py:100
+msgid "Use address"
+msgstr "Gebruik adres"
+
+#: ../src/plugin.py:109
+#: ../src/plugin.py:122
+msgid "Username:"
+msgstr "Gebruikersnaam:"
+
