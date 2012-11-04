@@ -536,8 +536,13 @@ class StreamingChannelFromServerScreen(Screen):
 						service = servicelist.getNext()
 						if not service.valid():
 							break
+						tmp = service.toString().split('autobouquet.')
+						if len(tmp) > 1 and len(tmp[1]) > 0:
+							tmp2 = tmp[1].split('\"')
+							name = self.readBouquetName(DIR_ENIGMA2 + 'autobouquet.' + tmp2[0])
+							list.append((name, tmp2[0]))
 						tmp = service.toString().split('userbouquet.')
-						if len(tmp[1]) > 0:
+						if len(tmp) > 1 and len(tmp[1]) > 0:
 							tmp2 = tmp[1].split('\"')
 							name = self.readBouquetName(DIR_ENIGMA2 + 'userbouquet.' + tmp2[0])
 							list.append((name, tmp2[0]))
