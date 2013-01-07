@@ -33,7 +33,7 @@ config.plugins.RemoteStreamConverter.telnetport = ConfigInteger(23, (0, 65535))
 
 class ServerEditor(ConfigListScreen, Screen):
 	skin = """
-		<screen position="center,center" size="560,230" title="FTP Server Editor">
+		<screen position="center,center" size="560,230" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" transparent="1" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" transparent="1" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" transparent="1" alphatest="on" />
@@ -47,6 +47,7 @@ class ServerEditor(ConfigListScreen, Screen):
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
+		Screen.setTitle(self, _("FTP Server Editor"))
 		self["key_red"] = StaticText(_("Exit"))
 		self["key_green"] = StaticText(_("OK"))
 		self["key_yellow"] = StaticText("")
@@ -168,7 +169,7 @@ class ServerEditor(ConfigListScreen, Screen):
 
 class StreamingChannelFromServerScreen(Screen):
 	skin = """
-		<screen name="StreamingChannelFromServerScreen" position="center,center" size="550,450" title="Select bouquets to convert" >
+		<screen name="StreamingChannelFromServerScreen" position="center,center" size="550,450" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
@@ -184,6 +185,7 @@ class StreamingChannelFromServerScreen(Screen):
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
+		Screen.setTitle(self, _("Select bouquets to convert"))
 		self.session = session
 		self.workList = []
 		self.readIndex = 0
@@ -203,7 +205,7 @@ class StreamingChannelFromServerScreen(Screen):
 			"red": self.close,
 			"green": self.keyGreen,
 			"yellow": self.keyYellow,
-			"blue": self.keyBleu
+			"blue": self.keyBlue
 		}, -1)
 
 	def keyOk(self):
@@ -212,11 +214,14 @@ class StreamingChannelFromServerScreen(Screen):
 		if self.readIndex > 0:
 			self.list.toggleSelection()
 
-	def keyBleu(self):
+	def keyBlue(self):
 		if not self.hasFiles or self.working:
 			return
 		if self.readIndex > 0:
-			self.list.toggleAllSelection()
+			try:
+				self.list.toggleAllSelection()
+			except AttributeError:
+				self.list.toggleSelection()
 
 	def keyYellow(self):
 		if not self.hasFiles:

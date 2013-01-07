@@ -4,7 +4,7 @@ from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_LANGUAGE
 import os, gettext
 
 PluginLanguageDomain = "RemoteChannelStreamConverter"
-PluginLanguagePath = "Extensions/RemoteChannelStreamConverter/po"
+PluginLanguagePath = "Extensions/RemoteChannelStreamConverter/locale"
 
 def localeInit():
 	gettext.bindtextdomain(PluginLanguageDomain, resolveFilename(SCOPE_PLUGINS, PluginLanguagePath))

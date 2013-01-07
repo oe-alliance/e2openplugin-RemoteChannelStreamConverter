@@ -29,11 +29,11 @@ dist-hook: $(LANGPO)
 
 install-data-local: $(LANGMO)
 	for lang in $(LANGS); do \
-		$(mkinstalldirs) $(DESTDIR)/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter/po/$$lang/LC_MESSAGES; \
-		$(INSTALL_DATA) $$lang.mo $(DESTDIR)/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter/po/$$lang/LC_MESSAGES/RemoteChannelStreamConverter.mo; \
+		$(mkinstalldirs) $(DESTDIR)/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter/locale/$$lang/LC_MESSAGES; \
+		$(INSTALL_DATA) $$lang.mo $(DESTDIR)/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter/locale/$$lang/LC_MESSAGES/RemoteChannelStreamConverter.mo; \
 	done
 
 uninstall-local:
 	for lang in $(LANGS); do \
-		$(RM) $(DESTDIR)/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter/po/$$lang/LC_MESSAGES/RemoteChannelStreamConverter.mo; \
+		$(RM) $(DESTDIR)/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter/locale/$$lang/LC_MESSAGES/RemoteChannelStreamConverter.mo; \
 	done
