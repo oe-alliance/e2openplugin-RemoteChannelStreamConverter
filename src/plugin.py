@@ -272,11 +272,12 @@ class StreamingChannelFromServerScreen(Screen):
 			file.close()
 			if len(lines) > 0:
 				for line in lines:
-					line = line.replace('\n', '').replace('\r', '').split()
-					if len(line) > 3 and (line[3].find('.tv.') != -1 or line[3].find('.radio.')):
-						tmp = line[3].replace('"', '')
-						if len(tmp) > 1:
-							list.append(tmp)
+					if line.startswith('#SERVICE'):
+						line = line.replace('\n', '').replace('\r', '').split()
+						if len(line) > 3 and (line[3].find('.tv.') != -1 or line[3].find('.radio.')):
+							tmp = line[3].replace('"', '')
+							if len(tmp) > 1:
+								list.append(tmp)
 		except:
 			pass
 
